@@ -16,9 +16,11 @@ export const App = () => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [totalHits, setTotalHits] = useState(false);
-  const [per_page, setPer_page] = useState(12);
+  // const [per_page, setPer_page] = useState(12);
   const [isEmply, setIsEmply] = useState(false);
   const [foto, setFoto] = useState('');
+
+  const per_page = 12;
 
   useEffect(() => {
     if (!search) return;
