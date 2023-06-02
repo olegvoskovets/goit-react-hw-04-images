@@ -71,14 +71,7 @@ export const App = () => {
       {foto && (
         <Modal
           onCloseModal={handleModal}
-          children={
-            <img
-              // className={css.Image}
-              src={foto}
-              alt={foto}
-              style={{ maxWidth: '900px' }}
-            />
-          }
+          children={<img src={foto} alt={foto} style={{ maxWidth: '900px' }} />}
         />
       )}
     </div>
