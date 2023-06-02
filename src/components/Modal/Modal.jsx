@@ -1,5 +1,5 @@
 //import { PropTypes } from 'prop-types';
-import { Component, useEffect } from 'react';
+import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import CloseIcon from '@mui/icons-material/Close';
 import css from './Modal.module.css';
@@ -17,7 +17,7 @@ export const Modal = ({ onCloseModal, children }) => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  });
+  }, [onCloseModal]);
 
   const handleBackdrop = event => {
     const { target, currentTarget } = event;
